@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SVGKit
+import NKOColorPickerView
 
 struct ONXLayerInfo {
     let x: Float
@@ -15,80 +17,44 @@ struct ONXLayerInfo {
 }
 
 class SecondViewController: UIViewController {
-    @IBOutlet weak var drawView: LayerDrawingView!
+    @IBOutlet weak var drawView: ContainerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        let rootLayer = CALayer()
-        if let path = NSBundle.mainBundle().pathForResource("settings", ofType: "json") {
-            var json: [String : AnyObject]?
-            if let data = NSData(contentsOfFile: path) {
-                do {
-                    json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? [String : AnyObject]
-                } catch let error as NSError {
-                    print(error)
-                }
-            }
-            
-            
-            if let shapes = json?["shapes"] as? [[String : AnyObject]] {
-                for shapeDict in shapes {
-                    if let pathsBase64 = shapeDict["encodedShapePaths"] as? String,
-                        let xNumber = shapeDict["initialGlobalCartesianPositionX"] as? NSNumber,
-                        let yNumber = shapeDict["initialGlobalCartesianPositionY"] as? NSNumber,
-                        let scale = shapeDict["localScale"] as? NSNumber {
-                        
-                        if let pathsData = NSData(base64EncodedString: pathsBase64, options: NSDataBase64DecodingOptions()) {
-                            if let pathsObject = NSKeyedUnarchiver.unarchiveObjectWithData(pathsData) {
-                                var beziersArray: [UIBezierPath] = []
-                                
-                                let pathItem = pathsObject.valueForKey("bPath")
-                                if let bezier = pathItem as? UIBezierPath {
-                                    beziersArray.append(bezier)
-                                } else if let array = pathItem as? [UIBezierPath] {
-                                    beziersArray.appendContentsOf(array)
-                                }
-                                
-                                if beziersArray.count > 0 {
-                                    for bezier in beziersArray {
-                                        let layer = CAShapeLayer()
-                                        layer.path = bezier.CGPath
-                                        layer.position = CGPoint(x: xNumber.doubleValue + 150, y: yNumber.doubleValue + 150)
-                                        layer.fillColor = UIColor.blackColor().CGColor
-                                        layer.strokeColor = UIColor.blackColor().CGColor
-                                        layer.transform = CATransform3DMakeScale(CGFloat(scale.floatValue), CGFloat(scale.floatValue), 1);
-                                        rootLayer.addSublayer(layer)
-                                    }
-                                } else {
-                                    print("WRONG path is \(pathsObject.valueForKey("bPath"))")
-                                }
-                            }
-                        }
-                    } else {
-                        print("YUPIIIII----------------------------\n\(shapeDict)\n----------------------------------")
-                    }
-                }
-            }
+        let view = NKOColorPickerView(frame: CGRectZero, color: self.color ?? UIColor.whiteColor()) { (color) in
+            self.color = color
+            self.drawView.setFillColor(color)
         }
         
-        self.drawView.drawingLayer = rootLayer
+        view.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(view)
+        view.leadingAnchor.constraintEqualToAnchor(self.view.leadingAnchor).active = true
+        view.trailingAnchor.constraintEqualToAnchor(self.view.trailingAnchor).active = true
+        view.bottomAnchor.constraintEqualToAnchor(self.view.bottomAnchor).active = true
+        view.heightAnchor.constraintEqualToConstant(300).active = true
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let url = NSBundle.mainBundle().URLForResource("testParser", withExtension: "svg")
+        let source = SVGKSourceURL.sourceFromURL(url)
+        self.setSVGSource(source)
     }
     @IBOutlet weak var imageView: UIImageView!
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setSVGSource(source: SVGKSource) {
+        _ = SVGKImage.imageWithSource(source, onCompletion: { loadedImage, parseResult in
+            for layer in loadedImage.CALayerTree.sublayers! {
+                if let shapeLayer = layer as? CAShapeLayer {
+                    print("\n---------------------\n\(shapeLayer.description)\nPATH\(shapeLayer.path!)\n----------------------")
+                }
+            }
+            
+            self.drawView.drawingLayer = loadedImage.CALayerTree
+        })
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    var color: UIColor?
 }

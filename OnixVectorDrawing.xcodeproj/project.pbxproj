@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F6B418D1CE27F8F00420ECB /* settings.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F6B418C1CE27F8E00420ECB /* settings.json */; };
 		2F6B418F1CE2870A00420ECB /* LayerDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6B418E1CE2870A00420ECB /* LayerDrawingView.swift */; };
 		2F732C241CDD0B1900A72A7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F732C231CDD0B1900A72A7D /* AppDelegate.swift */; };
 		2F732C261CDD0B1900A72A7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F732C251CDD0B1900A72A7D /* ViewController.swift */; };
@@ -19,6 +18,13 @@
 		2F732C521CDD673300A72A7D /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F732C511CDD673300A72A7D /* DrawingView.swift */; };
 		2FA03E811CE266530044C1D1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA03E801CE266530044C1D1 /* SecondViewController.swift */; };
 		2FA03E831CE266BA0044C1D1 /* image1 in Resources */ = {isa = PBXBuildFile; fileRef = 2FA03E821CE266BA0044C1D1 /* image1 */; };
+		2FEE6C161CE3B2610080D32A /* settings2.json in Resources */ = {isa = PBXBuildFile; fileRef = 2FEE6C151CE3B2610080D32A /* settings2.json */; };
+		2FEE6C181CE3B2AC0080D32A /* settings1.json in Resources */ = {isa = PBXBuildFile; fileRef = 2FEE6C171CE3B2AC0080D32A /* settings1.json */; };
+		2FEE6C1A1CE3C0EA0080D32A /* testParser.svg in Resources */ = {isa = PBXBuildFile; fileRef = 2FEE6C191CE3C0EA0080D32A /* testParser.svg */; };
+		2FEE6C211CE3CFE10080D32A /* SVGKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEE6C1F1CE3CFA40080D32A /* SVGKit.framework */; };
+		2FEE6C221CE3CFE20080D32A /* SVGKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEE6C1F1CE3CFA40080D32A /* SVGKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2FEE6C261CE3D6080080D32A /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE6C251CE3D6080080D32A /* ContainerView.swift */; };
+		6C18B90B1923804FE59F0ECD /* Pods_OnixVectorDrawing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA636A39ADA9739D2E45292 /* Pods_OnixVectorDrawing.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +44,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2FEE6C231CE3CFE20080D32A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2FEE6C221CE3CFE20080D32A /* SVGKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		2F6B418C1CE27F8E00420ECB /* settings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = settings.json; sourceTree = "<group>"; };
+		0406FB66FDE973B43D3FA188 /* Pods-OnixVectorDrawing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnixVectorDrawing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnixVectorDrawing/Pods-OnixVectorDrawing.debug.xcconfig"; sourceTree = "<group>"; };
 		2F6B418E1CE2870A00420ECB /* LayerDrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerDrawingView.swift; sourceTree = "<group>"; };
 		2F732C201CDD0B1900A72A7D /* OnixVectorDrawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnixVectorDrawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F732C231CDD0B1900A72A7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +77,14 @@
 		2F732C511CDD673300A72A7D /* DrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 		2FA03E801CE266530044C1D1 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2FA03E821CE266BA0044C1D1 /* image1 */ = {isa = PBXFileReference; lastKnownFileType = text; path = image1; sourceTree = "<group>"; };
+		2FEE6C151CE3B2610080D32A /* settings2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = settings2.json; sourceTree = "<group>"; };
+		2FEE6C171CE3B2AC0080D32A /* settings1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = settings1.json; sourceTree = "<group>"; };
+		2FEE6C191CE3C0EA0080D32A /* testParser.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = testParser.svg; sourceTree = "<group>"; };
+		2FEE6C1F1CE3CFA40080D32A /* SVGKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVGKit.framework; path = OnixVectorDrawing/SVGKit.framework; sourceTree = "<group>"; };
+		2FEE6C251CE3D6080080D32A /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		6DA636A39ADA9739D2E45292 /* Pods_OnixVectorDrawing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnixVectorDrawing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		873B23E25E3B17C50715BAE5 /* Pods-OnixVectorDrawing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnixVectorDrawing.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnixVectorDrawing/Pods-OnixVectorDrawing.release.xcconfig"; sourceTree = "<group>"; };
+		9B4548AE111081FB16DB5DCE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FEE6C211CE3CFE10080D32A /* SVGKit.framework in Frameworks */,
+				6C18B90B1923804FE59F0ECD /* Pods_OnixVectorDrawing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +121,8 @@
 				2F732C371CDD0B1A00A72A7D /* OnixVectorDrawingTests */,
 				2F732C421CDD0B1A00A72A7D /* OnixVectorDrawingUITests */,
 				2F732C211CDD0B1900A72A7D /* Products */,
+				C344FF3146CD428458959006 /* Frameworks */,
+				AA1CF3DD3FD3DB800641CD19 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,7 +139,8 @@
 		2F732C221CDD0B1900A72A7D /* OnixVectorDrawing */ = {
 			isa = PBXGroup;
 			children = (
-				2F6B418C1CE27F8E00420ECB /* settings.json */,
+				2FEE6C171CE3B2AC0080D32A /* settings1.json */,
+				2FEE6C151CE3B2610080D32A /* settings2.json */,
 				2FA03E821CE266BA0044C1D1 /* image1 */,
 				2F732C231CDD0B1900A72A7D /* AppDelegate.swift */,
 				2F732C511CDD673300A72A7D /* DrawingView.swift */,
@@ -117,7 +150,9 @@
 				2F732C2C1CDD0B1900A72A7D /* LaunchScreen.storyboard */,
 				2F732C2F1CDD0B1900A72A7D /* Info.plist */,
 				2FA03E801CE266530044C1D1 /* SecondViewController.swift */,
+				2FEE6C191CE3C0EA0080D32A /* testParser.svg */,
 				2F6B418E1CE2870A00420ECB /* LayerDrawingView.swift */,
+				2FEE6C251CE3D6080080D32A /* ContainerView.swift */,
 			);
 			path = OnixVectorDrawing;
 			sourceTree = "<group>";
@@ -140,6 +175,25 @@
 			path = OnixVectorDrawingUITests;
 			sourceTree = "<group>";
 		};
+		AA1CF3DD3FD3DB800641CD19 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0406FB66FDE973B43D3FA188 /* Pods-OnixVectorDrawing.debug.xcconfig */,
+				873B23E25E3B17C50715BAE5 /* Pods-OnixVectorDrawing.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C344FF3146CD428458959006 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FEE6C1F1CE3CFA40080D32A /* SVGKit.framework */,
+				9B4548AE111081FB16DB5DCE /* Pods.framework */,
+				6DA636A39ADA9739D2E45292 /* Pods_OnixVectorDrawing.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +201,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F732C481CDD0B1A00A72A7D /* Build configuration list for PBXNativeTarget "OnixVectorDrawing" */;
 			buildPhases = (
+				C77266626BA7B9BD30EE7828 /* 📦 Check Pods Manifest.lock */,
 				2F732C1C1CDD0B1900A72A7D /* Sources */,
 				2F732C1D1CDD0B1900A72A7D /* Frameworks */,
 				2F732C1E1CDD0B1900A72A7D /* Resources */,
+				695F4F0BF724F891CF486C45 /* 📦 Embed Pods Frameworks */,
+				44B89CB3252968728A524A98 /* 📦 Copy Pods Resources */,
+				2FEE6C231CE3CFE20080D32A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,8 +303,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F732C2E1CDD0B1900A72A7D /* LaunchScreen.storyboard in Resources */,
+				2FEE6C161CE3B2610080D32A /* settings2.json in Resources */,
+				2FEE6C1A1CE3C0EA0080D32A /* testParser.svg in Resources */,
+				2FEE6C181CE3B2AC0080D32A /* settings1.json in Resources */,
 				2F732C2B1CDD0B1900A72A7D /* Assets.xcassets in Resources */,
-				2F6B418D1CE27F8F00420ECB /* settings.json in Resources */,
 				2FA03E831CE266BA0044C1D1 /* image1 in Resources */,
 				2F732C291CDD0B1900A72A7D /* Main.storyboard in Resources */,
 			);
@@ -268,6 +328,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		44B89CB3252968728A524A98 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnixVectorDrawing/Pods-OnixVectorDrawing-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		695F4F0BF724F891CF486C45 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnixVectorDrawing/Pods-OnixVectorDrawing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C77266626BA7B9BD30EE7828 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2F732C1C1CDD0B1900A72A7D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -275,6 +383,7 @@
 			files = (
 				2FA03E811CE266530044C1D1 /* SecondViewController.swift in Sources */,
 				2F732C521CDD673300A72A7D /* DrawingView.swift in Sources */,
+				2FEE6C261CE3D6080080D32A /* ContainerView.swift in Sources */,
 				2F732C261CDD0B1900A72A7D /* ViewController.swift in Sources */,
 				2F6B418F1CE2870A00420ECB /* LayerDrawingView.swift in Sources */,
 				2F732C241CDD0B1900A72A7D /* AppDelegate.swift in Sources */,
@@ -419,8 +528,13 @@
 		};
 		2F732C491CDD0B1A00A72A7D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0406FB66FDE973B43D3FA188 /* Pods-OnixVectorDrawing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OnixVectorDrawing",
+				);
 				INFOPLIST_FILE = OnixVectorDrawing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.onix.OnixVectorDrawing;
@@ -430,8 +544,13 @@
 		};
 		2F732C4A1CDD0B1A00A72A7D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 873B23E25E3B17C50715BAE5 /* Pods-OnixVectorDrawing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OnixVectorDrawing",
+				);
 				INFOPLIST_FILE = OnixVectorDrawing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.onix.OnixVectorDrawing;

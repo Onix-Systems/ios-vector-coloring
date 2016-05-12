@@ -19,15 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="clk-J0-7kd" customClass="DrawingView" customModule="OnixVectorDrawing" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" red="0.92941176469999998" green="0.18823529410000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="clk-J0-7kd" secondAttribute="bottom" id="IZ3-Ws-o12"/>
+                            <constraint firstItem="clk-J0-7kd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7Ha-Sr-7CU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="clk-J0-7kd" secondAttribute="bottom" id="ZCD-y0-Qgw"/>
                             <constraint firstItem="clk-J0-7kd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rq8-Ua-hPa"/>
-                            <constraint firstItem="clk-J0-7kd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wiS-Be-LiG"/>
                             <constraint firstAttribute="trailing" secondItem="clk-J0-7kd" secondAttribute="trailing" id="yS8-kJ-WHf"/>
                         </constraints>
                     </view>
@@ -58,18 +58,39 @@
                             <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6sc-eO-zsl">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </imageView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJA-d8-Uty" customClass="LayerDrawingView" customModule="OnixVectorDrawing" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJA-d8-Uty" customClass="ContainerView" customModule="OnixVectorDrawing" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoF-BW-SLA">
+                                <rect key="frame" x="543" y="550" width="37" height="30"/>
+                                <state key="normal" title="Color"/>
+                                <connections>
+                                    <action selector="colorButtonAction:" destination="R85-iu-JA3" eventType="touchUpInside" id="yl4-Ne-m8S"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="USz-nE-rcn" firstAttribute="top" secondItem="IoF-BW-SLA" secondAttribute="bottom" constant="20" id="7US-Pp-bR8"/>
                             <constraint firstItem="RJA-d8-Uty" firstAttribute="top" secondItem="iwk-Dl-H2K" secondAttribute="bottom" id="MpK-bd-X14"/>
                             <constraint firstItem="USz-nE-rcn" firstAttribute="top" secondItem="RJA-d8-Uty" secondAttribute="bottom" id="WI5-sP-VZa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RJA-d8-Uty" secondAttribute="trailing" id="tbf-xR-vlB"/>
-                            <constraint firstItem="RJA-d8-Uty" firstAttribute="leading" secondItem="YCI-Xy-scp" secondAttribute="leadingMargin" id="tk1-dg-2k0"/>
+                            <constraint firstItem="RJA-d8-Uty" firstAttribute="top" secondItem="iwk-Dl-H2K" secondAttribute="bottom" id="qKk-Y7-C0V"/>
+                            <constraint firstItem="USz-nE-rcn" firstAttribute="top" secondItem="RJA-d8-Uty" secondAttribute="bottom" id="qij-Qw-CX5"/>
+                            <constraint firstAttribute="trailing" secondItem="RJA-d8-Uty" secondAttribute="trailing" id="tbf-xR-vlB"/>
+                            <constraint firstItem="RJA-d8-Uty" firstAttribute="leading" secondItem="YCI-Xy-scp" secondAttribute="leading" id="tk1-dg-2k0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IoF-BW-SLA" secondAttribute="trailing" id="tkL-WZ-HQr"/>
+                            <constraint firstItem="RJA-d8-Uty" firstAttribute="top" secondItem="YCI-Xy-scp" secondAttribute="top" id="wff-dG-uAa"/>
+                            <constraint firstAttribute="bottom" secondItem="RJA-d8-Uty" secondAttribute="bottom" id="zCp-zD-yo2"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MpK-bd-X14"/>
+                                <exclude reference="wff-dG-uAa"/>
+                                <exclude reference="zCp-zD-yo2"/>
+                                <exclude reference="WI5-sP-VZa"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="drawView" destination="RJA-d8-Uty" id="5Fc-u9-DBk"/>

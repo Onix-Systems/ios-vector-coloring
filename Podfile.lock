@@ -1,0 +1,22 @@
+PODS:
+  - CocoaLumberjack (2.3.0):
+    - CocoaLumberjack/Default (= 2.3.0)
+    - CocoaLumberjack/Extensions (= 2.3.0)
+  - CocoaLumberjack/Core (2.3.0)
+  - CocoaLumberjack/Default (2.3.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.3.0):
+    - CocoaLumberjack/Default
+  - NKOColorPickerView (0.5)
+
+DEPENDENCIES:
+  - CocoaLumberjack
+  - NKOColorPickerView
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
+  NKOColorPickerView: 895ca86fe5bd16f27c311ce8f5888907efee29ad
+
+PODFILE CHECKSUM: 0929cfa88e191161d048e4e1d95c65c7c2574012
+
+COCOAPODS: 1.0.0

@@ -1,0 +1,833 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04C9C05A51E35F8E2BD4CF3A282DD0A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D31AF728F56D0CAFFECA7DF51E2E0E6 /* Foundation.framework */; };
+		069D640D4A5573C4DD5FA65A3F7AB12E /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 290C9FEC08BBDE98E34B607BD06CFE12 /* DDTTYLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0B2C7BC25E4CF02A37C709921B1DE4E8 /* DDContextFilterLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = E89945F9509C2EF54CA7DC6C3E7B5883 /* DDContextFilterLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E5233F76618B00E55568C64C445808B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3212D7BC0710FE50E49B5AD2D9C0D0F /* CoreGraphics.framework */; };
+		13C48CD58AC41A8794693174AE433DC9 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F248F095EECE67A031FE8C280719203A /* DDASLLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1C708A2C039D256DA46A466CB4D7AA7C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA250D6AAA3D67B08752113FC8DF203 /* QuartzCore.framework */; };
+		1F49E397D7E2D6F0F2FA74A38A1822F1 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D137320306F6E26BA175BBB0091B23 /* DDFileLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		26BA59E06288B97A65F85E77A89884F5 /* DDLog+LOGV.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C21D8C46225A084F60C2797F34A1149 /* DDLog+LOGV.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D9819B3471AF2E8589D7F9D64E288B7 /* DDASLLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E637B4501D392DCBBC3DA797D6437ED /* DDASLLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30F4C2FB3EEBC177DAD27F67453B69F0 /* Pods-OnixVectorDrawing-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F35C971DCAB5BFA3BE6ABE40C51E52B /* Pods-OnixVectorDrawing-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		367E1617574FA61079459FE9CE2A09E0 /* DDAbstractDatabaseLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = B7E834B594B481E4BBD925137DCE6F57 /* DDAbstractDatabaseLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38F6CEBD348505552B59EAF29CFE4C9D /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9FC913AF5F8514F680BD7035EAD215 /* DDMultiFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		45AE26EC533837BE1EB764EE0B05847D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D31AF728F56D0CAFFECA7DF51E2E0E6 /* Foundation.framework */; };
+		463C3E95C0469876EC6DD7252A2AA533 /* DDASLLogCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9EB84779DF182DF5AB6DCA6FAEFEB4 /* DDASLLogCapture.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		48684B9AE80D6952C1E7C8C2B3455538 /* CocoaLumberjack.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DA3DF3B2DB0CCB46A023BCCFC0C81D9 /* CocoaLumberjack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CE243253337E2B36D0A20E3FB8FAD0E /* nko_brightness_guide.png in Resources */ = {isa = PBXBuildFile; fileRef = 88040FD93548B5B0084AF5FD3335B5E4 /* nko_brightness_guide.png */; };
+		6297B5F214910EF87A605E55C8120D83 /* nko_brightness_guide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E6801A010FE8E04DA0E511FDFCBB3F /* nko_brightness_guide@2x.png */; };
+		65BC6590E68D69B14D820E12A6DFF25C /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 06137843311FA5F3F2E748617BDCF2CE /* DDDispatchQueueLogFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6CCB8891EC5DECF019E81CB8FFB4F00B /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 414C433D21DF45F8E69B9DE48BF19CFB /* DDLog.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7982D2F1E40EF40AD679C1FDEB0C1B3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D31AF728F56D0CAFFECA7DF51E2E0E6 /* Foundation.framework */; };
+		96929100F95990DB5F4FC2732FF46B28 /* NKOColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F8B11C528FB05C7F295B0ACA9D41B6 /* NKOColorPickerView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		98A614616BC88BB9BFABD6A699CBD4D3 /* DDFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 94FDF50CF2BD31EE2AFDC47282A20099 /* DDFileLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA9AFCDF21641EA440545952DC2E2FDF /* DDContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 07928C4BB2B972869E7F9AD991AD36C5 /* DDContextFilterLogFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BDF8B7D3136117AE711240B418C3FBCB /* NKOColorPickerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B4B329DF7815233B2C700A9598C80E /* NKOColorPickerView-dummy.m */; };
+		CBA07FE88CF9BD3EE7AB0FA235CCC137 /* NKOColorPickerView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E785258BBE48B0B7ECF4B462F86EDCFA /* NKOColorPickerView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBFB81A6AF5CD4C412609BE7B05F7780 /* DDDispatchQueueLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B7464AEE9B410E0168DB5F52C74D9F9 /* DDDispatchQueueLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC941A0C18E7B529B571651B518EF152 /* DDASLLogCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 2540F306D76EFE1B84C262474AC74575 /* DDASLLogCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCBF2E7F349EBC460AEC8239A916E01F /* NKOColorPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CD6E21C047FCE8930C414E1249615A2 /* NKOColorPickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD9A1FD0548426F9BAC0B7A3CEF79206 /* DDLegacyMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 77D640BAD12C55F1FF6E745252503677 /* DDLegacyMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2E13DF0DDD622D12A2A6C58361B47AC /* DDAssertMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A2ED92DB566AEC9DC02EE281C7503E6 /* DDAssertMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D48F1DCE2D98CF39619A92E29E01D1DB /* CocoaLumberjack-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874F38A741F1AE83A4304C0165DA9 /* CocoaLumberjack-dummy.m */; };
+		E93C803FE8EBE74A1AF37C869D78AA8C /* DDLogMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 40EFE72D8A1AC8AA780B2D3F8F25DC2D /* DDLogMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E98A7913A504B8153D6E856E1AC5F3B1 /* DDMultiFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = A98E5221D3D5A207AD40F9008594C67A /* DDMultiFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB9F9A2E8BB3204363AE0166CC44BCAB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32BFCC5FCF20BECEF409508768C21E64 /* UIKit.framework */; };
+		EF4BEC993FB52323A31CA7189446D5CC /* DDTTYLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 32EBB62A048E1A78B9EB2C472E1AA705 /* DDTTYLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFBBD71CC0B15CCCB4C20B67EE68A7AD /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB2723814958FDA976FB8FE36A356F /* DDAbstractDatabaseLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F2D2DBDDB37847866FE61B35D1D6C095 /* nko_colormap.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F915A6130E071FEA285CC6D2710DBF4 /* nko_colormap.png */; };
+		F530C5D8A270E220D6FEE00E46A3E1E9 /* Pods-OnixVectorDrawing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1996EDD22A2C7BB4E7808380B5CB9845 /* Pods-OnixVectorDrawing-dummy.m */; };
+		F65103CDA9B85AD1A8C7626EFD6D64A3 /* DDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = F467FC596B1EF134CF95E89A8FD58722 /* DDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B3FCABFCFC3DDB18DAEBE598EEB522C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A2E8FED01C8A6BC8ADFCF3C3B78368F;
+			remoteInfo = CocoaLumberjack;
+		};
+		7C7DE30C83558EF299776D9CA3A3A8C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1CD1F1DE0F273D90638723EA7A09124;
+			remoteInfo = NKOColorPickerView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06137843311FA5F3F2E748617BDCF2CE /* DDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDDispatchQueueLogFormatter.m; path = Classes/Extensions/DDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		07928C4BB2B972869E7F9AD991AD36C5 /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDContextFilterLogFormatter.m; path = Classes/Extensions/DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		0A2ED92DB566AEC9DC02EE281C7503E6 /* DDAssertMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAssertMacros.h; path = Classes/DDAssertMacros.h; sourceTree = "<group>"; };
+		1956AD9578853837CFB8C3E4049B9F36 /* Pods-OnixVectorDrawing-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OnixVectorDrawing-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1996EDD22A2C7BB4E7808380B5CB9845 /* Pods-OnixVectorDrawing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OnixVectorDrawing-dummy.m"; sourceTree = "<group>"; };
+		1B7464AEE9B410E0168DB5F52C74D9F9 /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDDispatchQueueLogFormatter.h; path = Classes/Extensions/DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		2540F306D76EFE1B84C262474AC74575 /* DDASLLogCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogCapture.h; path = Classes/DDASLLogCapture.h; sourceTree = "<group>"; };
+		26A2F61FDABD8522CEE5ADDE2C5AA9A7 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		290C9FEC08BBDE98E34B607BD06CFE12 /* DDTTYLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDTTYLogger.m; path = Classes/DDTTYLogger.m; sourceTree = "<group>"; };
+		2F35C971DCAB5BFA3BE6ABE40C51E52B /* Pods-OnixVectorDrawing-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OnixVectorDrawing-umbrella.h"; sourceTree = "<group>"; };
+		31C50B9EF3747B6763CD252D970D827E /* NKOColorPickerView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NKOColorPickerView-prefix.pch"; sourceTree = "<group>"; };
+		32B4B329DF7815233B2C700A9598C80E /* NKOColorPickerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NKOColorPickerView-dummy.m"; sourceTree = "<group>"; };
+		32BFCC5FCF20BECEF409508768C21E64 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		32EBB62A048E1A78B9EB2C472E1AA705 /* DDTTYLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDTTYLogger.h; path = Classes/DDTTYLogger.h; sourceTree = "<group>"; };
+		3541A56F22DC08F521AA65DFDE22C6EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		404874F38A741F1AE83A4304C0165DA9 /* CocoaLumberjack-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaLumberjack-dummy.m"; sourceTree = "<group>"; };
+		40EFE72D8A1AC8AA780B2D3F8F25DC2D /* DDLogMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLogMacros.h; path = Classes/DDLogMacros.h; sourceTree = "<group>"; };
+		414C433D21DF45F8E69B9DE48BF19CFB /* DDLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDLog.m; path = Classes/DDLog.m; sourceTree = "<group>"; };
+		45E6801A010FE8E04DA0E511FDFCBB3F /* nko_brightness_guide@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "nko_brightness_guide@2x.png"; path = "Assets/nko_brightness_guide@2x.png"; sourceTree = "<group>"; };
+		45FE3E7524648CB38BA87F82C4F0F0FB /* CocoaLumberjack-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaLumberjack-prefix.pch"; sourceTree = "<group>"; };
+		491903B99ACE360DA376D556B3EEF9B8 /* CocoaLumberjack.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CocoaLumberjack.modulemap; sourceTree = "<group>"; };
+		4CD6E21C047FCE8930C414E1249615A2 /* NKOColorPickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NKOColorPickerView.h; sourceTree = "<group>"; };
+		5059E8A7D1F2E288A9F7B05DD02159B6 /* Pods-OnixVectorDrawing-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OnixVectorDrawing-frameworks.sh"; sourceTree = "<group>"; };
+		52FBE6A7E1F490255E49DB9846CFECEA /* Pods_OnixVectorDrawing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnixVectorDrawing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F915A6130E071FEA285CC6D2710DBF4 /* nko_colormap.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = nko_colormap.png; path = Assets/nko_colormap.png; sourceTree = "<group>"; };
+		5F9FC913AF5F8514F680BD7035EAD215 /* DDMultiFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDMultiFormatter.m; path = Classes/Extensions/DDMultiFormatter.m; sourceTree = "<group>"; };
+		618717E30EF69B9D6FD74E02733E0A78 /* Pods-OnixVectorDrawing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OnixVectorDrawing.release.xcconfig"; sourceTree = "<group>"; };
+		654E818E6F4F2D7F0CB8E87B4DB5EA3A /* Pods-OnixVectorDrawing-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OnixVectorDrawing-resources.sh"; sourceTree = "<group>"; };
+		688102FA841FEDB29317F5AF37A045A3 /* NKOColorPickerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = NKOColorPickerView.modulemap; sourceTree = "<group>"; };
+		6C21D8C46225A084F60C2797F34A1149 /* DDLog+LOGV.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDLog+LOGV.h"; path = "Classes/DDLog+LOGV.h"; sourceTree = "<group>"; };
+		6F5FAF621075806F7CC3581C612DEBE7 /* Pods-OnixVectorDrawing-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OnixVectorDrawing-acknowledgements.plist"; sourceTree = "<group>"; };
+		75F8B11C528FB05C7F295B0ACA9D41B6 /* NKOColorPickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NKOColorPickerView.m; sourceTree = "<group>"; };
+		77D640BAD12C55F1FF6E745252503677 /* DDLegacyMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLegacyMacros.h; path = Classes/DDLegacyMacros.h; sourceTree = "<group>"; };
+		7C9EB84779DF182DF5AB6DCA6FAEFEB4 /* DDASLLogCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogCapture.m; path = Classes/DDASLLogCapture.m; sourceTree = "<group>"; };
+		7DA3DF3B2DB0CCB46A023BCCFC0C81D9 /* CocoaLumberjack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CocoaLumberjack.h; path = Classes/CocoaLumberjack.h; sourceTree = "<group>"; };
+		84B5F432053622A94DC49E9256673A89 /* NKOColorPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NKOColorPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88040FD93548B5B0084AF5FD3335B5E4 /* nko_brightness_guide.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = nko_brightness_guide.png; path = Assets/nko_brightness_guide.png; sourceTree = "<group>"; };
+		897A949CD11FC24C53F068BD28A778EC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D31AF728F56D0CAFFECA7DF51E2E0E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8E637B4501D392DCBBC3DA797D6437ED /* DDASLLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogger.h; path = Classes/DDASLLogger.h; sourceTree = "<group>"; };
+		937A34DDB344D8D18BEADBF019D0A064 /* Pods-OnixVectorDrawing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OnixVectorDrawing.debug.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94FDF50CF2BD31EE2AFDC47282A20099 /* DDFileLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDFileLogger.h; path = Classes/DDFileLogger.h; sourceTree = "<group>"; };
+		A4D137320306F6E26BA175BBB0091B23 /* DDFileLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDFileLogger.m; path = Classes/DDFileLogger.m; sourceTree = "<group>"; };
+		A98E5221D3D5A207AD40F9008594C67A /* DDMultiFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDMultiFormatter.h; path = Classes/Extensions/DDMultiFormatter.h; sourceTree = "<group>"; };
+		AD4C0258C1FF0D4EE55FD6014A86081E /* CocoaLumberjack.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaLumberjack.xcconfig; sourceTree = "<group>"; };
+		B3CBE3D91B290B11E52488BD7A0181DC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B453D83D35047AA03E6325361F4FC59D /* NKOColorPickerView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NKOColorPickerView.xcconfig; sourceTree = "<group>"; };
+		B7E834B594B481E4BBD925137DCE6F57 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAbstractDatabaseLogger.h; path = Classes/DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		CAA250D6AAA3D67B08752113FC8DF203 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		CD1C4EED3E7E7CBFED35DF46C9DD9282 /* Pods-OnixVectorDrawing.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-OnixVectorDrawing.modulemap"; sourceTree = "<group>"; };
+		E3212D7BC0710FE50E49B5AD2D9C0D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		E785258BBE48B0B7ECF4B462F86EDCFA /* NKOColorPickerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NKOColorPickerView-umbrella.h"; sourceTree = "<group>"; };
+		E89945F9509C2EF54CA7DC6C3E7B5883 /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDContextFilterLogFormatter.h; path = Classes/Extensions/DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		F248F095EECE67A031FE8C280719203A /* DDASLLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogger.m; path = Classes/DDASLLogger.m; sourceTree = "<group>"; };
+		F467FC596B1EF134CF95E89A8FD58722 /* DDLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLog.h; path = Classes/DDLog.h; sourceTree = "<group>"; };
+		F9EB2723814958FDA976FB8FE36A356F /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDAbstractDatabaseLogger.m; path = Classes/DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		478A57B180ACE516A04423B398146273 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7982D2F1E40EF40AD679C1FDEB0C1B3B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6832C07EC55486656969F1FD40FC1B6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E5233F76618B00E55568C64C445808B /* CoreGraphics.framework in Frameworks */,
+				45AE26EC533837BE1EB764EE0B05847D /* Foundation.framework in Frameworks */,
+				1C708A2C039D256DA46A466CB4D7AA7C /* QuartzCore.framework in Frameworks */,
+				EB9F9A2E8BB3204363AE0166CC44BCAB /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB3228D2C2E04E2782FF46D76C1017BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C9C05A51E35F8E2BD4CF3A282DD0A3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06C7DD6D5ED2551370D9D11EF1D2DA7A /* NKOColorPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				4CD6E21C047FCE8930C414E1249615A2 /* NKOColorPickerView.h */,
+				75F8B11C528FB05C7F295B0ACA9D41B6 /* NKOColorPickerView.m */,
+				6EBB6EB654C20ED6AE62CB482F4C266A /* Resources */,
+				BB4A78A632CA919CB68F5E117B73C79E /* Support Files */,
+			);
+			path = NKOColorPickerView;
+			sourceTree = "<group>";
+		};
+		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE9CAD94F3ADC0A91CD07526E38EDDFA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		212CBE52BB710A39822479A93301E5BF /* Pods-OnixVectorDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				897A949CD11FC24C53F068BD28A778EC /* Info.plist */,
+				CD1C4EED3E7E7CBFED35DF46C9DD9282 /* Pods-OnixVectorDrawing.modulemap */,
+				1956AD9578853837CFB8C3E4049B9F36 /* Pods-OnixVectorDrawing-acknowledgements.markdown */,
+				6F5FAF621075806F7CC3581C612DEBE7 /* Pods-OnixVectorDrawing-acknowledgements.plist */,
+				1996EDD22A2C7BB4E7808380B5CB9845 /* Pods-OnixVectorDrawing-dummy.m */,
+				5059E8A7D1F2E288A9F7B05DD02159B6 /* Pods-OnixVectorDrawing-frameworks.sh */,
+				654E818E6F4F2D7F0CB8E87B4DB5EA3A /* Pods-OnixVectorDrawing-resources.sh */,
+				2F35C971DCAB5BFA3BE6ABE40C51E52B /* Pods-OnixVectorDrawing-umbrella.h */,
+				937A34DDB344D8D18BEADBF019D0A064 /* Pods-OnixVectorDrawing.debug.xcconfig */,
+				618717E30EF69B9D6FD74E02733E0A78 /* Pods-OnixVectorDrawing.release.xcconfig */,
+			);
+			name = "Pods-OnixVectorDrawing";
+			path = "Target Support Files/Pods-OnixVectorDrawing";
+			sourceTree = "<group>";
+		};
+		28D80979F5AB18C5A1286D977F1E0D67 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B7E834B594B481E4BBD925137DCE6F57 /* DDAbstractDatabaseLogger.h */,
+				F9EB2723814958FDA976FB8FE36A356F /* DDAbstractDatabaseLogger.m */,
+				2540F306D76EFE1B84C262474AC74575 /* DDASLLogCapture.h */,
+				7C9EB84779DF182DF5AB6DCA6FAEFEB4 /* DDASLLogCapture.m */,
+				8E637B4501D392DCBBC3DA797D6437ED /* DDASLLogger.h */,
+				F248F095EECE67A031FE8C280719203A /* DDASLLogger.m */,
+				0A2ED92DB566AEC9DC02EE281C7503E6 /* DDAssertMacros.h */,
+				94FDF50CF2BD31EE2AFDC47282A20099 /* DDFileLogger.h */,
+				A4D137320306F6E26BA175BBB0091B23 /* DDFileLogger.m */,
+				77D640BAD12C55F1FF6E745252503677 /* DDLegacyMacros.h */,
+				F467FC596B1EF134CF95E89A8FD58722 /* DDLog.h */,
+				414C433D21DF45F8E69B9DE48BF19CFB /* DDLog.m */,
+				6C21D8C46225A084F60C2797F34A1149 /* DDLog+LOGV.h */,
+				40EFE72D8A1AC8AA780B2D3F8F25DC2D /* DDLogMacros.h */,
+				32EBB62A048E1A78B9EB2C472E1AA705 /* DDTTYLogger.h */,
+				290C9FEC08BBDE98E34B607BD06CFE12 /* DDTTYLogger.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		559A49D188A3E7909B426789D81A27B8 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				7DA3DF3B2DB0CCB46A023BCCFC0C81D9 /* CocoaLumberjack.h */,
+			);
+			name = Default;
+			sourceTree = "<group>";
+		};
+		6EBB6EB654C20ED6AE62CB482F4C266A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				88040FD93548B5B0084AF5FD3335B5E4 /* nko_brightness_guide.png */,
+				45E6801A010FE8E04DA0E511FDFCBB3F /* nko_brightness_guide@2x.png */,
+				5F915A6130E071FEA285CC6D2710DBF4 /* nko_colormap.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		700982FCD62DE63AC6AFFE93AC1B09E4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E89945F9509C2EF54CA7DC6C3E7B5883 /* DDContextFilterLogFormatter.h */,
+				07928C4BB2B972869E7F9AD991AD36C5 /* DDContextFilterLogFormatter.m */,
+				1B7464AEE9B410E0168DB5F52C74D9F9 /* DDDispatchQueueLogFormatter.h */,
+				06137843311FA5F3F2E748617BDCF2CE /* DDDispatchQueueLogFormatter.m */,
+				A98E5221D3D5A207AD40F9008594C67A /* DDMultiFormatter.h */,
+				5F9FC913AF5F8514F680BD7035EAD215 /* DDMultiFormatter.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
+				E88D3A670A5E1D22BB264FA96D5175C6 /* Pods */,
+				99ABF33237C41E7B1959706C6A881D70 /* Products */,
+				DD679EDFDA22448450A536684C9B1225 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		99ABF33237C41E7B1959706C6A881D70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26A2F61FDABD8522CEE5ADDE2C5AA9A7 /* CocoaLumberjack.framework */,
+				84B5F432053622A94DC49E9256673A89 /* NKOColorPickerView.framework */,
+				52FBE6A7E1F490255E49DB9846CFECEA /* Pods_OnixVectorDrawing.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CF6DEC8F34DFCC93514D780D36B76B3 /* CocoaLumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				28D80979F5AB18C5A1286D977F1E0D67 /* Core */,
+				559A49D188A3E7909B426789D81A27B8 /* Default */,
+				700982FCD62DE63AC6AFFE93AC1B09E4 /* Extensions */,
+				F7AC165F4DA2EC3F7D761C65B797391F /* Support Files */,
+			);
+			path = CocoaLumberjack;
+			sourceTree = "<group>";
+		};
+		BB4A78A632CA919CB68F5E117B73C79E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3541A56F22DC08F521AA65DFDE22C6EA /* Info.plist */,
+				688102FA841FEDB29317F5AF37A045A3 /* NKOColorPickerView.modulemap */,
+				B453D83D35047AA03E6325361F4FC59D /* NKOColorPickerView.xcconfig */,
+				32B4B329DF7815233B2C700A9598C80E /* NKOColorPickerView-dummy.m */,
+				31C50B9EF3747B6763CD252D970D827E /* NKOColorPickerView-prefix.pch */,
+				E785258BBE48B0B7ECF4B462F86EDCFA /* NKOColorPickerView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NKOColorPickerView";
+			sourceTree = "<group>";
+		};
+		BE9CAD94F3ADC0A91CD07526E38EDDFA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E3212D7BC0710FE50E49B5AD2D9C0D0F /* CoreGraphics.framework */,
+				8D31AF728F56D0CAFFECA7DF51E2E0E6 /* Foundation.framework */,
+				CAA250D6AAA3D67B08752113FC8DF203 /* QuartzCore.framework */,
+				32BFCC5FCF20BECEF409508768C21E64 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DD679EDFDA22448450A536684C9B1225 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				212CBE52BB710A39822479A93301E5BF /* Pods-OnixVectorDrawing */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E88D3A670A5E1D22BB264FA96D5175C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CF6DEC8F34DFCC93514D780D36B76B3 /* CocoaLumberjack */,
+				06C7DD6D5ED2551370D9D11EF1D2DA7A /* NKOColorPickerView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F7AC165F4DA2EC3F7D761C65B797391F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				491903B99ACE360DA376D556B3EEF9B8 /* CocoaLumberjack.modulemap */,
+				AD4C0258C1FF0D4EE55FD6014A86081E /* CocoaLumberjack.xcconfig */,
+				404874F38A741F1AE83A4304C0165DA9 /* CocoaLumberjack-dummy.m */,
+				45FE3E7524648CB38BA87F82C4F0F0FB /* CocoaLumberjack-prefix.pch */,
+				B3CBE3D91B290B11E52488BD7A0181DC /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CocoaLumberjack";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2C9A36AD717882024F0419411ECD8CBD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBA07FE88CF9BD3EE7AB0FA235CCC137 /* NKOColorPickerView-umbrella.h in Headers */,
+				CCBF2E7F349EBC460AEC8239A916E01F /* NKOColorPickerView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3852F3840CAFC54D77E52379F23A371E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30F4C2FB3EEBC177DAD27F67453B69F0 /* Pods-OnixVectorDrawing-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B696790F4D9D354C6F1EE30E08E72EE6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48684B9AE80D6952C1E7C8C2B3455538 /* CocoaLumberjack.h in Headers */,
+				367E1617574FA61079459FE9CE2A09E0 /* DDAbstractDatabaseLogger.h in Headers */,
+				CC941A0C18E7B529B571651B518EF152 /* DDASLLogCapture.h in Headers */,
+				2D9819B3471AF2E8589D7F9D64E288B7 /* DDASLLogger.h in Headers */,
+				D2E13DF0DDD622D12A2A6C58361B47AC /* DDAssertMacros.h in Headers */,
+				0B2C7BC25E4CF02A37C709921B1DE4E8 /* DDContextFilterLogFormatter.h in Headers */,
+				CBFB81A6AF5CD4C412609BE7B05F7780 /* DDDispatchQueueLogFormatter.h in Headers */,
+				98A614616BC88BB9BFABD6A699CBD4D3 /* DDFileLogger.h in Headers */,
+				CD9A1FD0548426F9BAC0B7A3CEF79206 /* DDLegacyMacros.h in Headers */,
+				26BA59E06288B97A65F85E77A89884F5 /* DDLog+LOGV.h in Headers */,
+				F65103CDA9B85AD1A8C7626EFD6D64A3 /* DDLog.h in Headers */,
+				E93C803FE8EBE74A1AF37C869D78AA8C /* DDLogMacros.h in Headers */,
+				E98A7913A504B8153D6E856E1AC5F3B1 /* DDMultiFormatter.h in Headers */,
+				EF4BEC993FB52323A31CA7189446D5CC /* DDTTYLogger.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8A2E8FED01C8A6BC8ADFCF3C3B78368F /* CocoaLumberjack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A249857EF3A38EF925BAE6F4464F1B3 /* Build configuration list for PBXNativeTarget "CocoaLumberjack" */;
+			buildPhases = (
+				69B6B4D621C2C9F61470874F1D557944 /* Sources */,
+				CB3228D2C2E04E2782FF46D76C1017BE /* Frameworks */,
+				B696790F4D9D354C6F1EE30E08E72EE6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaLumberjack;
+			productName = CocoaLumberjack;
+			productReference = 26A2F61FDABD8522CEE5ADDE2C5AA9A7 /* CocoaLumberjack.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C1CD1F1DE0F273D90638723EA7A09124 /* NKOColorPickerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58AF74CB6F797846C6E0E2D44DB37F27 /* Build configuration list for PBXNativeTarget "NKOColorPickerView" */;
+			buildPhases = (
+				01EE91548A7AEE722B225D0242E9754F /* Sources */,
+				6832C07EC55486656969F1FD40FC1B6D /* Frameworks */,
+				2C9A36AD717882024F0419411ECD8CBD /* Headers */,
+				C76A50831986DA1F84DA73A897E74874 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NKOColorPickerView;
+			productName = NKOColorPickerView;
+			productReference = 84B5F432053622A94DC49E9256673A89 /* NKOColorPickerView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F91A31E4CF04770E5D423B2FFEE1A4AA /* Pods-OnixVectorDrawing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3800FA53E0F7917B3E1D0704EC92B8CE /* Build configuration list for PBXNativeTarget "Pods-OnixVectorDrawing" */;
+			buildPhases = (
+				8C646076958C2DFBFC5AAB6C09B26238 /* Sources */,
+				478A57B180ACE516A04423B398146273 /* Frameworks */,
+				3852F3840CAFC54D77E52379F23A371E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				513C8EF69992C154DDC1480D8811EFF2 /* PBXTargetDependency */,
+				41AABEC1F48EFFFF792667D4B1639A17 /* PBXTargetDependency */,
+			);
+			name = "Pods-OnixVectorDrawing";
+			productName = "Pods-OnixVectorDrawing";
+			productReference = 52FBE6A7E1F490255E49DB9846CFECEA /* Pods_OnixVectorDrawing.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 99ABF33237C41E7B1959706C6A881D70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A2E8FED01C8A6BC8ADFCF3C3B78368F /* CocoaLumberjack */,
+				C1CD1F1DE0F273D90638723EA7A09124 /* NKOColorPickerView */,
+				F91A31E4CF04770E5D423B2FFEE1A4AA /* Pods-OnixVectorDrawing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C76A50831986DA1F84DA73A897E74874 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CE243253337E2B36D0A20E3FB8FAD0E /* nko_brightness_guide.png in Resources */,
+				6297B5F214910EF87A605E55C8120D83 /* nko_brightness_guide@2x.png in Resources */,
+				F2D2DBDDB37847866FE61B35D1D6C095 /* nko_colormap.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01EE91548A7AEE722B225D0242E9754F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDF8B7D3136117AE711240B418C3FBCB /* NKOColorPickerView-dummy.m in Sources */,
+				96929100F95990DB5F4FC2732FF46B28 /* NKOColorPickerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B6B4D621C2C9F61470874F1D557944 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D48F1DCE2D98CF39619A92E29E01D1DB /* CocoaLumberjack-dummy.m in Sources */,
+				EFBBD71CC0B15CCCB4C20B67EE68A7AD /* DDAbstractDatabaseLogger.m in Sources */,
+				463C3E95C0469876EC6DD7252A2AA533 /* DDASLLogCapture.m in Sources */,
+				13C48CD58AC41A8794693174AE433DC9 /* DDASLLogger.m in Sources */,
+				BA9AFCDF21641EA440545952DC2E2FDF /* DDContextFilterLogFormatter.m in Sources */,
+				65BC6590E68D69B14D820E12A6DFF25C /* DDDispatchQueueLogFormatter.m in Sources */,
+				1F49E397D7E2D6F0F2FA74A38A1822F1 /* DDFileLogger.m in Sources */,
+				6CCB8891EC5DECF019E81CB8FFB4F00B /* DDLog.m in Sources */,
+				38F6CEBD348505552B59EAF29CFE4C9D /* DDMultiFormatter.m in Sources */,
+				069D640D4A5573C4DD5FA65A3F7AB12E /* DDTTYLogger.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C646076958C2DFBFC5AAB6C09B26238 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F530C5D8A270E220D6FEE00E46A3E1E9 /* Pods-OnixVectorDrawing-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		41AABEC1F48EFFFF792667D4B1639A17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NKOColorPickerView;
+			target = C1CD1F1DE0F273D90638723EA7A09124 /* NKOColorPickerView */;
+			targetProxy = 7C7DE30C83558EF299776D9CA3A3A8C5 /* PBXContainerItemProxy */;
+		};
+		513C8EF69992C154DDC1480D8811EFF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaLumberjack;
+			target = 8A2E8FED01C8A6BC8ADFCF3C3B78368F /* CocoaLumberjack */;
+			targetProxy = 2B3FCABFCFC3DDB18DAEBE598EEB522C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2F8FF5D5193C1A025200FCFB3010873B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD4C0258C1FF0D4EE55FD6014A86081E /* CocoaLumberjack.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaLumberjack/CocoaLumberjack-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CocoaLumberjack/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CocoaLumberjack/CocoaLumberjack.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CocoaLumberjack;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		39090D4BF5890F596A708AEF5F8FD610 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 618717E30EF69B9D6FD74E02733E0A78 /* Pods-OnixVectorDrawing.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-OnixVectorDrawing/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OnixVectorDrawing/Pods-OnixVectorDrawing.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_OnixVectorDrawing;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3FA451D268613890FA8A5A03801E11D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		675E0A5F6261EFBF51BB0A6736A73EB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B453D83D35047AA03E6325361F4FC59D /* NKOColorPickerView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/NKOColorPickerView/NKOColorPickerView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NKOColorPickerView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NKOColorPickerView/NKOColorPickerView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = NKOColorPickerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8D66BAF83E4F28188199C0D6BD68E573 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B453D83D35047AA03E6325361F4FC59D /* NKOColorPickerView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/NKOColorPickerView/NKOColorPickerView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NKOColorPickerView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NKOColorPickerView/NKOColorPickerView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = NKOColorPickerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CDDFB93767143440BA066FAAA472B7CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 937A34DDB344D8D18BEADBF019D0A064 /* Pods-OnixVectorDrawing.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-OnixVectorDrawing/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OnixVectorDrawing/Pods-OnixVectorDrawing.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_OnixVectorDrawing;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FD0DBA63D0F1E8FD3ACCA2C9E16EF726 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD4C0258C1FF0D4EE55FD6014A86081E /* CocoaLumberjack.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaLumberjack/CocoaLumberjack-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CocoaLumberjack/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CocoaLumberjack/CocoaLumberjack.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CocoaLumberjack;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A249857EF3A38EF925BAE6F4464F1B3 /* Build configuration list for PBXNativeTarget "CocoaLumberjack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD0DBA63D0F1E8FD3ACCA2C9E16EF726 /* Debug */,
+				2F8FF5D5193C1A025200FCFB3010873B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */,
+				3FA451D268613890FA8A5A03801E11D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3800FA53E0F7917B3E1D0704EC92B8CE /* Build configuration list for PBXNativeTarget "Pods-OnixVectorDrawing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDDFB93767143440BA066FAAA472B7CC /* Debug */,
+				39090D4BF5890F596A708AEF5F8FD610 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58AF74CB6F797846C6E0E2D44DB37F27 /* Build configuration list for PBXNativeTarget "NKOColorPickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D66BAF83E4F28188199C0D6BD68E573 /* Debug */,
+				675E0A5F6261EFBF51BB0A6736A73EB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
