@@ -52,11 +52,9 @@ class LayerDrawingView: UIView, UIScrollViewDelegate {
         super.drawRect(rect)
         
         if let layer = drawingLayer, let context = UIGraphicsGetCurrentContext() {
-            UIColor.blackColor().setFill()
-            UIRectFill(rect)
-            
             CGContextScaleCTM(context, scaleForCTM, scaleForCTM)
             CGContextTranslateCTM(context, translateForCTM.x, translateForCTM.y)
+            
             layer.renderInContext(context)
         }
     }
@@ -74,7 +72,7 @@ class LayerDrawingView: UIView, UIScrollViewDelegate {
         
         // Scale
         let scaleDiff = sender.scale - lastPinchScale
-        scaleForCTM += scaleDiff
+        scaleForCTM += (scaleDiff * scaleForCTM)
         lastPinchScale = sender.scale
         
         self.setNeedsDisplay()
@@ -87,7 +85,7 @@ class LayerDrawingView: UIView, UIScrollViewDelegate {
         
         let translation = sender.translationInView(self)
         let translateDiff = CGPointMake(translation.x - lastPanTranslate.x, translation.y - lastPanTranslate.y)
-        translateForCTM = CGPointMake(translateForCTM.x + translateDiff.x, translateForCTM.y + translateDiff.y)
+        translateForCTM = CGPointMake(translateForCTM.x + (translateDiff.x / scaleForCTM), translateForCTM.y + (translateDiff.y / scaleForCTM))
         lastPanTranslate = translation
         
         self.setNeedsDisplay()

@@ -17,22 +17,49 @@ struct ONXLayerInfo {
 }
 
 class SecondViewController: UIViewController {
-    @IBOutlet weak var drawView: ContainerView!
+    @IBOutlet weak var drawView: LayerDrawingView!
+    
+    let colorPicker: NKOColorPickerView
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        colorPicker = NKOColorPickerView(frame: CGRectZero, color: UIColor.grayColor(), andDidChangeColorBlock: nil)
+        
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.commonInit()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        colorPicker = NKOColorPickerView(frame: CGRectZero, color: UIColor.grayColor(), andDidChangeColorBlock: nil)
+        
+        super.init(coder: aDecoder)
+        self.commonInit()
+    }
+    
+    func commonInit() {
+        colorPicker.didChangeColorBlock = { color in
+            self.color = color
+            self.drawView.setFillColor(color)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let view = NKOColorPickerView(frame: CGRectZero, color: self.color ?? UIColor.whiteColor()) { (color) in
-            self.color = color
-            self.drawView.setFillColor(color)
-        }
+        let button = UIButton(type: .System)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Color picker", forState: .Normal)
+        button.addTarget(self, action: #selector(colorPickerButtonAction), forControlEvents: .TouchUpInside)
+        self.view.addSubview(button)
         
-        view.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(view)
-        view.leadingAnchor.constraintEqualToAnchor(self.view.leadingAnchor).active = true
-        view.trailingAnchor.constraintEqualToAnchor(self.view.trailingAnchor).active = true
-        view.bottomAnchor.constraintEqualToAnchor(self.view.bottomAnchor).active = true
-        view.heightAnchor.constraintEqualToConstant(300).active = true
+        button.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor, constant: -10).active = true
+        button.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor, constant: -10).active = true
+        
+        colorPicker.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(colorPicker)
+        colorPicker.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor).active = true
+        colorPicker.trailingAnchor.constraintEqualToAnchor(view.trailingAnchor).active = true
+        colorPicker.bottomAnchor.constraintEqualToAnchor(button.topAnchor, constant: 0).active = true
+        colorPicker.heightAnchor.constraintEqualToConstant(300).active = true
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -44,15 +71,15 @@ class SecondViewController: UIViewController {
     }
     @IBOutlet weak var imageView: UIImageView!
     
+    func colorPickerButtonAction(sender: UIButton) {
+        colorPicker.hidden = !colorPicker.hidden
+    }
+    
     func setSVGSource(source: SVGKSource) {
         _ = SVGKImage.imageWithSource(source, onCompletion: { loadedImage, parseResult in
-            for layer in loadedImage.CALayerTree.sublayers! {
-                if let shapeLayer = layer as? CAShapeLayer {
-                    print("\n---------------------\n\(shapeLayer.description)\nPATH\(shapeLayer.path!)\n----------------------")
-                }
-            }
-            
-            self.drawView.drawingLayer = loadedImage.CALayerTree
+            dispatch_async(dispatch_get_main_queue(), {
+                self.drawView.drawingLayer = loadedImage.CALayerTree
+            })
         })
     }
     
