@@ -1,4 +1,4 @@
-**SVGKit + Core Graphics - our demo launched for skill demonstration**
+**SVGKit + Core Graphics**
 
 Vector coloring app. Vectors are taken from SVG and converted to Core Graphics paths. Can be zoomed to any level without image quality loss.
 
